@@ -6,7 +6,7 @@
 
 `Eixo 4`
 
-Site de fácil usabilidade que possibilita organizar roteiros e despesas de viagem.
+Aplicação web e mobile de fácil usabilidade que possibilita organizar roteiros e despesas de viagem.
 
 ## Integrantes
 
