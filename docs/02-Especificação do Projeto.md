@@ -79,8 +79,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Oferecer opções de login e cadastro. | ALTA | 
+|RF-002| Exibir anúncios e promoções relacionadas a viagens. | BAIXA |
+|RF-003| Verificar as credenciais e autenticar os usuários. | ALTA |
+|RF-004| Fornecer opção de redefinição de senha. | ALTA |
+|RF-005| Permitir atualização dos dados do usuário. | MÉDIA |
+|RF-006| Permitir adição de despesas. | ALTA |
+|RF-007| Calcular total de despesas e saldo disponível. | MÉDIA |
+|RF-008| Classificar e exibir despesas por categorias. | BAIXA |
+|RF-009| Permitir criação e edição de um itinerário. | ALTA |
+|RF-010| Permitir adição de destinos, atividades e notas. | ALTA |
+
 
 ### Requisitos não Funcionais
 
@@ -88,6 +97,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-003| O site deve ser intuitivo e fácil de usar. |  MÉDIA | 
+|RNF-004| O site deve ser compatível com os navegadores Google Chrome e Firefox no Desktop. |  ALTA | 
+|RNF-005| O sistema deve ser capaz de lidar com o número necessário de usuários sem queda no desempenho |  MÉDIA | 
+|RNF-006| Executável em iOS e Android	 |  ALTA | 
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -110,8 +124,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
+|01| O projeto deverá seguir o cronograma proposto pela PUC |
 |02| Não pode ser desenvolvido um módulo de backend        |
+|03| O site deve ser acessível a partir dos principais navegadores (Chrome, Firefox, Safari, Edge) e dispositivos. |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
