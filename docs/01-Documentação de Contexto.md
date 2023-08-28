@@ -1,6 +1,13 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+## Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+
+A indústria do turismo é uma das mais importantes e vibrantes do mundo, e seu poder de transformação é gigante. O desejo por explorar novos destinos, experimentar culturas diferentes, criar memórias e se aventurar está sempre presente no dia-a-dia das pessoas - Afinal, quem nunca se pegou pensando no meio do dia em viajar quando entrar de férias? 
+
+Contudo, o processo de planejamento de viagens pode ser desafiador e muitas vezes uma verdadeira sobrecarga, com tantas opções de destinos (nacionais e no estrangeiro), atividades, acomodações e custos, sem contar o estilo da viagem (quero viajar para conhecer a culinária? para aprender? somente pontos turísticos? vida noturna? São mesmo muitas opções e tipos diferentes de turismo. Nesse cenário, uma aplicação distribuída surge como uma solução para facilitar o processo de planejamento de viagens.
+
+A proposta visa mudar a maneira como as pessoas planejam suas viagens, fornecendo uma plataforma integrada para explorar destinos, criar itinerários personalizados, gerenciar orçamentos, etc. Com uma abordagem distribuída, a aplicação estará acessível tanto em navegadores web quanto em dispositivos móveis, permitindo que os usuários acessem suas informações de viagem em qualquer lugar, a qualquer momento.
+
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
