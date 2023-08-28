@@ -35,13 +35,10 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 ## Público-Alvo
 
 Homens e mulheres entre 18 e 75 anos, com formação mínima de ensino médio completo, renda mensal entre dois e oito salários - mínimos, solteiros ou chefes de família, moradores de uma das cinco regiões geográficas do Brasil, que fazem uso de aplicativos e plataformas digitais com acesso a rede mundial de computadores e que fazem viagens periodicamente seja a negócio ou entretenimento.
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+![MapaDeStakeHoldersTravelTrace](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/a17a01e0-b6f8-4555-ae22-3776dd94b40f)
+
+
