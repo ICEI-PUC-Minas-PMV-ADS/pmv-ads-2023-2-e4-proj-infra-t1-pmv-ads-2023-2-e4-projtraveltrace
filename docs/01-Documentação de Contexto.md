@@ -32,12 +32,10 @@ Apresente também alguns (pelo menos 2) objetivos específicos dependendo de ond
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A necessidade urgente de simplificar e melhorar o processo de planejamento de viagens para os viajantes contemporâneos sustenta a criação de uma aplicação de planejamento de viagens distribuída. Essa proposta se destina a solucionar a constante complexidade inerente ao planejamento, considerando a importância da personalização, gestão de orçamento, e pela acessibilidade multiplataforma.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+A aplicação tem o potencial de mudar a maneira como encaramos a preparação para nossas aventuras, fornecendo aos viajantes uma ferramenta abrangente e fácil de entender. Permite que as pessoas se concentrem no que realmente importa: a experiência enriquecedora de explorar o mundo, ao fornecer um caminho mais claro através do labirinto de opções e informações. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
