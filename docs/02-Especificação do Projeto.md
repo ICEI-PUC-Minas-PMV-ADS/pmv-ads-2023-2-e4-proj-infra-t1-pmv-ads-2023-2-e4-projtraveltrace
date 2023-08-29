@@ -8,19 +8,36 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+### Amélia Santos
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+- **Idade:** 36 anos
+- **Ocupação:** Professora de escola pública
+- **Motivação:** Quer visitar todos os irmãos em tempo hábil
+- **História:** Amélia mudou-se para belo horizonte quando casou e todo ano ela visita seus irmãos e irmãs, porém eles moram em estados diferentes e por causa disso ela gasta muito tempo viajando, da última vez que tentou visitar seus irmãos ela só conseguiu visitar 6 deles e teve que voltar para trabalhar.
+- **Necessidade:** O desejo de Amélia é que ela possa de forma prática fazer um cronograma para conseguir visitar todos os irmãos
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+![amélia](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103431797/66d9db1f-d9db-4bac-9a8d-06d3dac5c354)
+
+### Antony Oliveira
+
+- **Idade:** 18 anos
+- **Ocupação:** Auxiliar Administrativo
+- **Motivação:** Viajar nas férias e gastar pouco
+- **História:** Antony mora em Minas Gerais e está de férias do trabalho. Ele nunca viajou e também nunca conheceu a praia. Ele quer conhecer outro estado e ver o mar em suas férias, porém ele não tem muitos recursos para gastar
+  
+![antony](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103431797/319cf568-f38f-479c-97ef-d014b9d3c4bc)
+
+
+### Karina Machado
+
+- **Idade:** 27 anos
+- **Ocupação:** Vice diretora de uma multinacional
+- **Motivação:** Se organizar melhor e conhecer melhor os lugares onde passa.
+- História:** Karina viaja muito a trabalho, fazendo reuniões e visitando filiais. Muitas vezes depois de realizar seu trabalho, sobra tempo até o horário de ir para o aeroporto e o desejo dela é conhecer os pontos turísticos dos lugares onde passa, mas quase sempre ela não consegue se organizar para fazer isso. 
+
+
+![Karina](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103431797/2ceb3256-3819-4115-9051-a84bc1718658)
+
 
 ## Histórias de Usuários
 
@@ -28,8 +45,10 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Amélia Santos | Planejar um itinerário           | Para visitar todos os irmãos               |
+|Antony Oliveira       | Gerenciar os gastos da viagem                 | Para aproveitar as férias |
+|Karina Machado | Organizar o itinerário de viagens          | Para aproveitar o tempo livre               |
+
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
