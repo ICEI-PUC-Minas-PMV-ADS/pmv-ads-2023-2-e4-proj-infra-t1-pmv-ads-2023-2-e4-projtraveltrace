@@ -24,13 +24,13 @@ Objetivo Específico
 
 Promover funcionalidades necessárias para criar um ambiente acessível para as diversas necessidades que os usuários possam necessitar, democratizando o uso da aplicação.
 
-Promover um ambiente digital seguro para o usuário, preservando as políticas de privacidade e uso de dados
+Promover um ambiente digital seguro para o usuário, preservando as políticas de privacidade e uso de dados.
 
 Testar o sistema de forma local e online.
 
-Modelar um site que o usuário consiga criar sua conta para obter configurações personalizadas 
+Modelar um site que o usuário consiga criar sua conta para obter configurações personalizadas.
 
-Gerar um aplicativo mobile com as mesma funcionalidades do site 
+Gerar um aplicativo mobile com as mesma funcionalidades do site.
 
 
 ## Justificativa
