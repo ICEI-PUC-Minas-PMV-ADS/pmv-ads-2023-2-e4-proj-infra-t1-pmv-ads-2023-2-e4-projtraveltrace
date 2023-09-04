@@ -41,9 +41,9 @@ Essa branch sera trabalhada localmente, enquanto a funcionalidade não estiver p
 
 ### Divisão de Papéis
 
-- **Scrum Master**: 
-- **Product Owner**: 
-- **Equipe de desenvolvimento**: 
+- **Scrum Master**: Laura Santos Andrade
+- **Product Owner**: Mariana Júlia Estevam Corrêa
+- **Equipe de desenvolvimento**: Francisco Costa Ribeiro, Gabriel Aston Ferreira Costa, Gabriel Vinícius Silveira e Silva, Ricardo Peixoto da Silva.
 
 
 ### Processo
