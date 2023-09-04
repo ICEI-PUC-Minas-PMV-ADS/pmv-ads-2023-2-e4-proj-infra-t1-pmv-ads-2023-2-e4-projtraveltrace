@@ -17,14 +17,19 @@ Desconhecimento de custo local, ausência de orçamento definidos, planejamento 
 ## Objetivos
 
 Objetivo Geral
+
 Criar um site que auxilie na organização das despesas e no itinerário de uma viagem, facilitando a vida do usuário nesta parte do planejamento.
 
 Objetivo Específico 
 
 Promover funcionalidades necessárias para criar um ambiente acessível para as diversas necessidades que os usuários possam necessitar, democratizando o uso da aplicação.
+
 Promover um ambiente digital seguro para o usuário, preservando as políticas de privacidade e uso de dados
+
 Testar o sistema de forma local e online.
+
 Modelar um site que o usuário consiga criar sua conta para obter configurações personalizadas 
+
 Gerar um aplicativo mobile com as mesma funcionalidades do site 
 
 
