@@ -36,6 +36,11 @@ A necessidade urgente de simplificar e melhorar o processo de planejamento de vi
 
 A aplicação tem o potencial de mudar a maneira como encaramos a preparação para nossas aventuras, fornecendo aos viajantes uma ferramenta abrangente e fácil de entender. Permite que as pessoas se concentrem no que realmente importa: a experiência enriquecedora de explorar o mundo, ao fornecer um caminho mais claro através do labirinto de opções e informações. 
 
+## Proposta da Solução
+
+A Proposta da Solução a ser realizada pelo grupo é uma uma aplicação simples e intuitiva que possibilite o usuário utilize a ferramenta para otimizar e simplificar a organização e acompanhamento de sua viagem de forma que possa acompanhar os gastos, itinerários e demais informações em uma só plataforma e assim tornar a experiencia ainda mais inesquecivel. 
+
+
 
 ## Público-Alvo
 
