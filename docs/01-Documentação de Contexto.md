@@ -46,8 +46,7 @@ A Proposta da Solução a ser realizada pelo grupo é uma uma aplicação simple
 
 Homens e mulheres entre 18 e 75 anos, com formação mínima de ensino médio completo, renda mensal entre dois e oito salários - mínimos, solteiros ou chefes de família, moradores de uma das cinco regiões geográficas do Brasil, que fazem uso de aplicativos e plataformas digitais com acesso a rede mundial de computadores e que realizam viagens periodicamente seja a negócio ou entretenimento.
 
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Foi adicionado a seguir informações sobre o público-alvo por meio de um mapa de stakeholders.
 
 ![MapaDeStakeHoldersTravelTrace](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/a17a01e0-b6f8-4555-ae22-3776dd94b40f)
 
