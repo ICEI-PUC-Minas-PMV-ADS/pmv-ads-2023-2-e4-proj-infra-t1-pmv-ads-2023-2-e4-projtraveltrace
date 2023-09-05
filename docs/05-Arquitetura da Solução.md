@@ -49,12 +49,73 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ad
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+O conceito de Qualidade de Software abrange uma série de fatores que devem ser atendidos para garantir que a aplicação esteja em conformidade com os requisitos acordados com o cliente. Essa busca pela qualidade se traduz na satisfação das necessidades do usuário, sendo aferida por meio de testes que garantem resultados alinhados com as expectativas do cliente.
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+No cenário de desenvolvimento de software, a qualidade se define como um conjunto de características que devem ser alcançadas para satisfazer as necessidades dos usuários. Entretanto, essa satisfação não é obtida espontaneamente, mas sim por meio de um processo de desenvolvimento contínuo. Assim, a qualidade do produto está intimamente ligada ao processo de desenvolvimento.
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+Para orientar o desenvolvimento de um projeto de software em relação à qualidade, a norma internacional ISO/IEC 25010, uma atualização da ISO/IEC 9126, define oito características principais e 30 subcaracterísticas de qualidade. A escolha das subcaracterísticas a serem utilizadas como referência pela equipe depende de alguns aspectos simples de qualidade e é justificada da seguinte forma:
+
+**Funcionalidade:** Se refere à capacidade do software de atender às necessidades funcionais especificadas. Métricas, como a quantidade de funcionalidades implementadas corretamente e a taxa de defeitos funcionais encontrados, podem ser usadas para avaliar a funcionalidade.
+
+**Confiabilidade:** Garante que o software funcione de forma consistente e livre de falhas. Métricas como o tempo médio entre falhas (MTBF) e a taxa de falhas podem ser usadas para avaliar a confiabilidade.
+
+**Usabilidade:** Importante para a satisfação do usuário. Métricas de usabilidade, como tempo médio de aprendizado e taxa de erro do usuário, ajudam a avaliar essa subcaracterística.
+
+**Eficiência de Desempenho:** Diz respeito ao desempenho do software em termos de recursos utilizados. Métricas de eficiência incluem o tempo de resposta do sistema e a utilização de recursos de hardware.
+
+**Compatibilidade:** Garante que o software funcione em diferentes ambientes. Métricas podem incluir o número de plataformas suportadas e o grau de conformidade com os padrões.
+
+**Segurança:** A proteção de dados e sistemas e vital. Métricas de segurança podem incluir a taxa de vulnerabilidades identificadas e o tempo médio para corrigir vulnerabilidades.
+
+**Manutenibilidade:** Se relaciona à facilidade de fazer alterações e melhorias no software. Métricas, como o tempo médio para implementar uma correção ou atualização, podem ser usadas para avaliar a manutenibilidade.
+
+**Portabilidade:** Capacidade do software de ser transferido para diferentes ambientes. Métricas podem incluir o tempo necessário para adaptar o software a uma nova plataforma e a taxa de sucesso das adaptações.
+
+Assim sendo, foram definidos as seguintes características e subcaracterísticas que nortearão o desenvolvimento da aplicação distribuída TravelTrace, bem como suas justificativas e métricas:
+
+Com base nessas características e subcaracterísticas segue abaixo as que foram escolhidas para nortear o desenvolvimento projeto do Pet Pass mobile, bem como a justificativa e métricas que permitirão à equipe avaliar os objetos de interesse. 
+
+**Segurança**:
+
+- Confidencialidade: *A aplicação garante a confidencialidade dos dados? Sim/Não.*
+
+- Integridade: *A aplicação garante a integridade dos dados? Sim/Não.*
+
+**Usabilidade**:
+
+- Apreensibilidade: *É fácil aprender a utilizar a aplicação? Sim/Não.*
+
+- Operacionalidade: *É fácil de operar e controlar a funcionalidades da aplicação? Sim/Não.*
+
+- Estética da interface: *A aplicação possui interface atual? Sim/Não.*
+
+- Inteligibilidade: *A interface é de fácil entendimento? Sim/Não.*
+
+**Portabilidade** :
+
+- Adaptabilidade: *O sistema esta adaptado a Android e IOS? Sim/Não/Apenas um deles.*
+
+- Conformidade: *O sistema apresenta aderência a padrões de portabilidade? Sim/Não.*
+
+**Confiabilidade** :
+
+- Maturidade: *Com que frequência a aplicação apresenta falhas? Sempre/Às vezes/Nunca.*
+
+- Recuperabilidade: *A aplicação é capaz de recuperar dados após uma falha? Sim/Não.*
+
+- Tolerância a falhas: *A aplicação reage bem às falhas que aparecem? Sim/Não.*
+
+**Eficiência** :
+
+- Tempo: *Mínimo tempo de resposta? Sim e Não. Máxima velocidade de execução? Sim/Não.*
+
+- Recursos utilizados: *Mínimo uso de recursos para o mesmo resultado? Sim/Não.*
+
+**Manutenibilidade** :
+
+- Modificabilidade: *Há facilidade em modificar o código? Sim/Não.*
+
+- Testabilidade: *Há facilidade de testar a aplicação? Sim/Não.*
 
 > **Links Úteis**:
 >
