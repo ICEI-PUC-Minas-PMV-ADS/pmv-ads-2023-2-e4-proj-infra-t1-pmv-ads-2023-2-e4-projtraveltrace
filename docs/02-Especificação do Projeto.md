@@ -74,6 +74,18 @@ Entre os dados utilizados estão informações sobre cidades, datas, hospedagem,
 
 Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
 
+Seguindo a linha de pensamento de La Porta (2018), desenvolvimento de uma aplicação distribuída de planejamento de viagens tem como foco facilitar a organização de informações referentes a roteiros, transportes, além da criação de estimativas de gastos. Todas essas informações serão editáveis pelo usuário, existindo a possibilidade de adicionar novos dados ao longo do tempo, como os gastos reais que estiverem ocorrendo durante a viagem. Se tornará, estão, uma plataforma que possibilita o planejamento e a organização de os aspectos de uma viagem antes, durante e depois da realização desta. Além disso, poderá também ser usado como uma ferramenta de controle de gastos durante viagens.
+
+Diante dessas tendências e estatísticas apresentadas, torna-se evidente que uma aplicações distribuída desempenharia um papel fundamental na simplificação e melhoria da experiência de planejamento de viagens para os viajantes modernos. Podemos citar alguns exemplos de melhoria no processo de planejamento de viagens a partir da implementação da aplicação, tais como: 
+
+**Exploração de destinos:** O usuário poderá manter sua rota atualizada, de acordo com o interesse específico que tenha em cada lugar;
+
+**Itinerários Personalizados:** Sem depender de planejamentos enviesados por outros usuários com interesses diametralmente opostos ou agências de viagens com interesses escusos querendo controlar e direcionar o viajante para parceiros;
+
+**Gerenciamento de Orçamento:** O aspecto financeiro das viagens é uma preocupação comum. Com a aplicação o usuário poderá definir seu orçamento e rastrear as despesas. Isso ajuda a manter as finanças sob controle e evita surpresas desagradáveis ao voltar para casa.
+
+**Acesso de Qualquer Lugar, a Qualquer Momento:** Com a abordagem distribuída, estando disponível tanto em formato web para browsers tanto para dispositivos móveis, significa que os viajantes têm suas informações de viagem à mão a qualquer momento, em qualquer lugar. Isso é particularmente útil durante a viagem, quando é necessário verificar reservas, itinerários e outras informações importantes e nem sempre há a possibilidade de usar um PC.
+
 ### Processo 1 – NOME DO PROCESSO
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
