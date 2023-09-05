@@ -15,8 +15,18 @@ A proposta visa mudar a maneira como as pessoas planejam suas viagens, fornecend
 
 ## Problema
 A dificuldade em organizar os custos e o roteiro de uma viagem pode ser um grande problema, levando a despesas desnecessárias e tempo mal aproveitado durante a viagem. Este problema se apresenta em vários aspectos, como por exemplo:
-Desconhecimento de custo local, ausência de orçamento definidos, planejamento de última hora, falha em planejar atividades, despesas não planejadas
 
+Desconhecimento de custo local, ausência de orçamento definidos, planejamento de última hora, falha em planejar atividades, despesas não planejadas.
+
+Uma viagem de última hora, ao invés de ser um descanso da rotina diária e momento de lazer para a família pode se torna rapidamente em um terrível pesadelo e grande dor de cabeça. 
+
+Um possível cenário em que alguém possa "ir do céu ao inferno" é apareceu em uma pesquisa do Sindicato Patronal dos Meios de Hospedagem da Cidade do Rio de Janeiro (HotéisRIO). A pesquisa, divulgada na segunda-feira dia 04 de setembro de 2023, aponta uma taxa de ocupação média de 75,34% das hospedagens da cidade para o feriado da quinta-feira da mesma semana (07 de setembro). Imagine só chegar na Cidade Maravilhosa pensando em passar o feriado e não ter onde ficar
+
+Em entrevista ao portal Agência Brasil, o presidente do HotéisRIO, Alfredo Lopes, estimou que a taxa de ocupação pode se elevar ainda mais, “porque o mercado nacional faz reserva muito em cima da hora. Então, você pode ter um acréscimo ainda na ocupação”.
+
+O presidente do HotéisRIO diz acreditar que no réveillon deste ano a hotelaria deve registrar 100% de ocupação. A prefeitura já elaborou o caderno de encargos com antecedência e a empresa organizadora do evento já foi selecionada. Lopes adiantou que está prevista coletiva do governador Cláudio Castro e do prefeito Eduardo Paes para divulgação dos shows da virada do ano. “Isso é muito importante para a venda de reservas nos hotéis. Mas tem uma boa procura já”, adiantou.
+
+Assim sendo, vê-se que o planejamento de uma viagem é de extrema importância para que aquelas merecidas férias possam ser, de fato, um momento de lazer e descanso.
 
 ## Objetivos
 
