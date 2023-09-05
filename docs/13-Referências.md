@@ -6,6 +6,8 @@ AGÊNCIA BRASIL. Rede hoteleira do Rio espera 75% das vagas ocupadas no feriadã
 
 PANROTAS. Tripadvisor lança ferramenta de planejamento de viagens com IA. [S. l.]: Karina Cedeño, 19 jul. 2023. Disponível em: https://www.panrotas.com.br/mercado/tecnologia/2023/07/tripadvisor-lanca-ferramenta-de-planejamento-de-viagens-com-ia_198250.html. Acesso em: 4 set. 2023.
 
+LA PORTA, Henrique de Souza. Planejando Viagens: Desenvolvimento do sistema Web para planejamento de viagens. Orientador: Dr. Marcelo Soares Pimenta. 2018. 48 p. Dissertação (Bacharelado em Ciência da Computação) - Universidade Federal do Rio Grande do Sul, Porto Alegre - RS, 2018. Disponível em: https://www.lume.ufrgs.br/handle/10183/190146. Acesso em: 4 set. 2023.
+
 Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
 
 > **Links Úteis**:
