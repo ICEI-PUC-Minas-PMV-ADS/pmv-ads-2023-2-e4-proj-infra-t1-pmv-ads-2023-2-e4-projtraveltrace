@@ -204,7 +204,9 @@ Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o ger
 
 O gerenciamento apropriado de tarefas contribuirá para que o projeto tenha um bom nível de produtividade. É fundamental que ocorra a gestão de tarefas e de pessoas, para que os profissionais envolvidos no projeto possam ser facilmente gerenciados.
 
-Membros do time: 
+Scrum Master: Laura Santos Andrade
+Product Owner: Mariana Júlia Estevam Corrêa
+Equipe de desenvolvimento: Francisco Costa Ribeiro, Gabriel Aston Ferreira Costa, Gabriel Vinícius Silveira e Silva, Ricardo Peixoto da Silva.
 
 
 
