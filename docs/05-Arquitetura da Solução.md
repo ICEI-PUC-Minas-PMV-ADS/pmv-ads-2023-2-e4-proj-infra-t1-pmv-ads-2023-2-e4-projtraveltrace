@@ -22,11 +22,11 @@ O modelo ER a seguir representa por meio de um diagrama, um tipo de fluxograma, 
 
 ## Esquema Relacional
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
+O Esquema Relacional descrito a seguir é um modelo de dados representativo baseado no princípio de que todos os dados estão armazenados em tabelas juntamente com suas restrições de integridade e suas respectivas chaves primárias e secundárias. 
  
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
 
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+![Esquema Relacional Travel Trace](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/45764735-5f19-45f1-be0c-8305bc91f2ef)
+
 
 ## Modelo Físico
 
