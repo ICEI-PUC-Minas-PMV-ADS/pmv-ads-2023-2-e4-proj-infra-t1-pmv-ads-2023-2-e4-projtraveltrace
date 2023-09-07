@@ -212,6 +212,7 @@ O gerenciamento da equipe será realizado pelo Projets, onde todas as atividades
 
 Utilizando a visualização do board podemos ter uma visão de tudo que precisa ser entregua na sprint e utilizando o princípio do fluxo puxado temos uma grande colaboração e pro atividade na manutenção de tarefas que estejam sobrecarregando algum integrante.
 
+![projects](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/102702197/4b6e9bf9-8066-4bdb-a84b-235abb57fb2d)
 
 
 ## Gestão de Orçamento
