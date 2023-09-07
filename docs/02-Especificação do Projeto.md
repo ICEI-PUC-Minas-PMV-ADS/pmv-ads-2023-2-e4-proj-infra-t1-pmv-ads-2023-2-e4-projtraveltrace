@@ -86,17 +86,19 @@ Diante dessas tendências e estatísticas apresentadas, torna-se evidente que um
 
 **Acesso de Qualquer Lugar, a Qualquer Momento:** Com a abordagem distribuída, estando disponível tanto em formato web para browsers tanto para dispositivos móveis, significa que os viajantes têm suas informações de viagem à mão a qualquer momento, em qualquer lugar. Isso é particularmente útil durante a viagem, quando é necessário verificar reservas, itinerários e outras informações importantes e nem sempre há a possibilidade de usar um PC.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo de planejamento da viagem
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+![Processo 1](img/process1.jpg)
 
-![Processo 1](img/02-bpmn-proc1.png)
+Como se pode observar,  processo de planejamento de uma viagem pode ser significativamente aprimorado com o uso de um software dedicado a essa função.
 
-### Processo 2 – NOME DO PROCESSO
+**Centralização de Informações:** O software de planejamento de viagem permite que os usuários centralizem todas as informações relacionadas à viagem em um único local. Isso inclui datas de viagem, itinerários, reservas de voos, hotéis, atividades e documentos de viagem. Ter todas essas informações em um só lugar facilita o acesso e a organização.
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+**Planejamento de Roteiro Personalizado:** Os usuários podem criar roteiros personalizados com base em seus interesses e preferências. 
 
-![Processo 2](img/02-bpmn-proc2.png)
+**Acompanhamento de Gastos:** A solução auxiliará no acompanhamento de gastos, o que ajuda os viajantes a manterem o controle do orçamento. Eles podem registrar despesas em tempo real e receber alertas quando estiverem próximos de exceder o limite de gastos.
+
+**Documentação de Viagem:** O software pode ajudar na organização de documentos de viagem, como passaportes, vistos e seguro de viagem. Uma segurança a mais para o caso de algum extravio.
 
 ## Indicadores de Desempenho
 
