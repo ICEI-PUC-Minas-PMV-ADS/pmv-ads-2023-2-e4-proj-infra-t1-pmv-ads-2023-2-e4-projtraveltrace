@@ -210,4 +210,5 @@ A equipe cumprirá suas tarefas de acordo com as habilidades e características 
 
 Com base em todo o escopo produzido anteriormente, os custos do projeto serão gerenciados em conformidade com os objetivos e requisitos alcançados na concepção do projeto, de modo a garantir o desenvolvimento norteado pela realidade financeira pré-definida.Com base em todo o escopo produzido anteriormente, os custos do projeto serão gerenciados em conformidade com os objetivos e requisitos alcançados na concepção do projeto, de modo a garantir o desenvolvimento norteado pela realidade financeira pré-definida.
 
+![Gestão de REcursos eixo 4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/102702197/30ef3191-cab7-458c-837c-eeabd252891d)
 
