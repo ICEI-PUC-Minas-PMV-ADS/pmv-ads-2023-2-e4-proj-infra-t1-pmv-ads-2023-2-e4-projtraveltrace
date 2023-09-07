@@ -212,7 +212,9 @@ O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utiliz
 O gerenciamento apropriado de tarefas contribuirá para que o projeto tenha um bom nível de produtividade. É fundamental que ocorra a gestão de tarefas e de pessoas, para que os profissionais envolvidos no projeto possam ser facilmente gerenciados.
 
 Scrum Master: Laura Santos Andrade
+
 Product Owner: Mariana Júlia Estevam Corrêa
+
 Equipe de desenvolvimento: Francisco Costa Ribeiro, Gabriel Aston Ferreira Costa, Gabriel Vinícius Silveira e Silva, Ricardo Peixoto da Silva.
 
 O gerenciamento da equipe será realizado pelo Projects, onde todas as atividades de uma sprint serão dispostas e divididas entre os integrantes. A utilização da metodologia ágil permite uma auto-organização da equipe priorizando atividades, bem como criando atividades não esperadas e alterando a ordem de acordo com as necessidades observadas na reuiões semanais. A criação das sprint é de consenso geral da equipe bem como a organização de próximas sprints e debatida sempre colocada em pauta e livre para todos integrantes criarem novas tarefas.
