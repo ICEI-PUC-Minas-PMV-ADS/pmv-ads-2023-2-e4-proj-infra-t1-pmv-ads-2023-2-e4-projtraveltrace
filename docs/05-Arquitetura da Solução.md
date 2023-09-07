@@ -14,11 +14,11 @@ A seguir, é representado o Diagrama de Classes do sistema Travel Trace:
 
 ## Modelo ER
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
+O modelo ER a seguir representa por meio de um diagrama, um tipo de fluxograma, de como as entidades se relacionam entre si na aplicação interativa descrevendo as cardinalidades que definem as relações em termos de números.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
+![Diagrama ER TRAVEL TRACE](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/5af380ff-4c18-4003-a8a6-d1b8d3ea311d)
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+
 
 ## Esquema Relacional
 
