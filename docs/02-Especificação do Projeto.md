@@ -208,7 +208,7 @@ Scrum Master: Laura Santos Andrade
 Product Owner: Mariana Júlia Estevam Corrêa
 Equipe de desenvolvimento: Francisco Costa Ribeiro, Gabriel Aston Ferreira Costa, Gabriel Vinícius Silveira e Silva, Ricardo Peixoto da Silva.
 
-O gerenciamento da equipe será realizado pelo Projets, onde todas as atividades de uma sprint serão dispostas e divididas entre os integrantes. A utilização da metodologia ágil permite uma auto-organização da equipe priorizando atividades, bem como criando atividades não esperadas e alterando a ordem de acordo com as necessidades observadas na reuiões semanais. A criação das sprint é de consenso geral da equipe bem como a organização de próximas sprints e debatida sempre colocada em pauta e livre para todos integrantes criarem novas tarefas.
+O gerenciamento da equipe será realizado pelo Projects, onde todas as atividades de uma sprint serão dispostas e divididas entre os integrantes. A utilização da metodologia ágil permite uma auto-organização da equipe priorizando atividades, bem como criando atividades não esperadas e alterando a ordem de acordo com as necessidades observadas na reuiões semanais. A criação das sprint é de consenso geral da equipe bem como a organização de próximas sprints e debatida sempre colocada em pauta e livre para todos integrantes criarem novas tarefas.
 
 Utilizando a visualização do board podemos ter uma visão de tudo que precisa ser entregua na sprint e utilizando o princípio do fluxo puxado temos uma grande colaboração e pro atividade na manutenção de tarefas que estejam sobrecarregando algum integrante.
 
