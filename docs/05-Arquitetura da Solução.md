@@ -35,17 +35,29 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 ## Tecnologias Utilizadas
 
 IDE: vscode
+
 Ferramentas de comunicação: teams e discord
+
 Ferramenta para desenho de tela: Figma
+
 Criação do documento: Google Docs
+
 Gerenciamento do Projeto: Github Projects
+
 Repositório do código fonte: Github
+
 Linguagens utilizadas no Front-end: Html, css, javascript
+
 Linguagem utilizada no Back-end: C#
+
 Linguagem Mobile: React-Native Expo CLI. 
+
 Framework Front-end: Bootstrap
+
 Framework para integração entre back-end e banco de dados: Entity Framework
+
 Banco de Dados: Microsoft SQL Server
+
 Servidor em nuvem para banco de dados: Azure
 
 ## Hospedagem
