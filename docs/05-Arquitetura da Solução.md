@@ -34,9 +34,19 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+IDE: vscode
+Ferramentas de comunicação: teams e discord
+Ferramenta para desenho de tela: Figma
+Criação do documento: Google Docs
+Gerenciamento do Projeto: Github Projects
+Repositório do código fonte: Github
+Linguagens utilizadas no Front-end: Html, css, javascript
+Linguagem utilizada no Back-end: C#
+Linguagem Mobile: React-Native Expo CLI. 
+Framework Front-end: Bootstrap
+Framework para integração entre back-end e banco de dados: Entity Framework
+Banco de Dados: Microsoft SQL Server
+Servidor em nuvem para banco de dados: Azure
 
 ## Hospedagem
 
