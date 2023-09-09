@@ -135,9 +135,3 @@ Com base nessas características e subcaracterísticas segue abaixo as que foram
 - Modificabilidade: *Há facilidade em modificar o código? Sim/Não.*
 
 - Testabilidade: *Há facilidade de testar a aplicação? Sim/Não.*
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
