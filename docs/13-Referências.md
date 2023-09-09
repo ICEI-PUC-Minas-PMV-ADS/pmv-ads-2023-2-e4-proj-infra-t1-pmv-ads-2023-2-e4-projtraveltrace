@@ -8,6 +8,10 @@ PANROTAS. Tripadvisor lança ferramenta de planejamento de viagens com IA. [S. l
 
 LA PORTA, Henrique de Souza. Planejando Viagens: Desenvolvimento do sistema Web para planejamento de viagens. Orientador: Dr. Marcelo Soares Pimenta. 2018. 48 p. Dissertação (Bacharelado em Ciência da Computação) - Universidade Federal do Rio Grande do Sul, Porto Alegre - RS, 2018. Disponível em: https://www.lume.ufrgs.br/handle/10183/190146. Acesso em: 4 set. 2023.
 
+SegurosPromo. Erros mais comuns em uma programação de viagem. Disponível em: https://www.segurospromo.com.br/blog/organizar-viagem-5-erros-que-os-viajantes-mais-cometem. Acesso em: 6 set. 2023.
+
+Travelex. Como organizar os custos de viagem sem apertar o orçamento. Disponível em: https://www.confidencecambio.com.br/blog/orcamento-para-viagem-com-controle-financeiro. Acesso em: 6 set. 2023. 
+
 Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
 
 > **Links Úteis**:
