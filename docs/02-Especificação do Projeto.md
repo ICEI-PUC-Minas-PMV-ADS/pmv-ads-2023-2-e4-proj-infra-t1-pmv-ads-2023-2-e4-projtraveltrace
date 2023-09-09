@@ -50,8 +50,6 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Karina Machado | Organizar o itinerário de viagens          | Para aproveitar o tempo livre               |
 
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
 > **Links Úteis**:
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
 > - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
@@ -63,16 +61,12 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional.
-
 Atualmente o planejamento de viagens por conta própria, sem necessidade da intervenção de agências de viagens, tem se tornado cada vez mais popular e acessível devido a grande quantidade de informações disponíveis na internet. Porém, para alguns viajantes surge a dificuldade de organizar esse grande volume de dados e os possíveis custos envolvidos, principalmente quando as viagens são longas, incluem mais de um destino e envolvem mais de uma pessoa. Além disso, outra dificuldade é armazenar as diversas informações que serão necessárias durante a viagem de forma prática e acessível.
 
 Entre os dados utilizados estão informações sobre cidades, datas, hospedagem, transportes, atrações turísticas, previsão de custos, entre outros, que são muitas vezes impressos posteriormente para consulta antes e mesmo durante a viagem. O controle de custos ao longo da viagem é realizado através de anotações diárias no papel ou até em programas editores de planilhas, como o Microsoft Excel. Nesse processo informações podem ser perdidas ou esquecidas, além de não existir uma facilidade de acesso remoto das informações a qualquer momento.
 
 
 ### Descrição Geral da Proposta
-
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
 
 Seguindo a linha de pensamento de La Porta (2018), desenvolvimento de uma aplicação distribuída de planejamento de viagens tem como foco facilitar a organização de informações referentes a roteiros, transportes, além da criação de estimativas de gastos. Todas essas informações serão editáveis pelo usuário, existindo a possibilidade de adicionar novos dados ao longo do tempo, como os gastos reais que estiverem ocorrendo durante a viagem. Se tornará, estão, uma plataforma que possibilita o planejamento e a organização de os aspectos de uma viagem antes, durante e depois da realização desta. Além disso, poderá também ser usado como uma ferramenta de controle de gastos durante viagens.
 
@@ -102,12 +96,16 @@ Como se pode observar,  processo de planejamento de uma viagem pode ser signific
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+| INDICADOR | OBJETIVO | DESCRIÇÃO  |  CÁLCULO  |  FONTE DE DADOS  |  PERSPECTIVA  |
+|-----------|----------|------------|-----------|------------------|---------------|
+|  Tempo de resposta | Avaliar se o tempo de resposta da aplicação é apropriado  |  Medir o tempo que leva para a aplicação responder a uma solicitação do usuário, como salvar uma nova informação da viagem. Um tempo de resposta mais curto é geralmente desejável.  |  Média dos resultados dos testes  |  Testes do sistema  |  Melhorar os processos para deixar a aplicação mais ágil.|
+| Disponibilidade  |  Avaliar a capacidade da aplicação de estar disponível aos usuários  |  Uma alta disponibilidade é crucial para uma aplicação distribuída, esta pode ser demandada pelo usuário a qualquer momento  |  Pode ser calculada como uma porcentagem de tempo de funcionamento em relação ao tempo total  |  Testes do sistema  |  Aprimoramento da aplicação  |
+|  Taxa de erros  |  Verificar a ocorrência de eventos anormais do funcionamento  |  Acompanhar a proporção de solicitações que resultam em erros ou falhas na aplicação. O objetivo é manter essa taxa o mais baixa possível  |  Porcentagem de erros registrados em testes  |  Testes do sistema  |  Melhorar processos internos da aplicação para evitar novas ocorrências de erros e deixá-la mais resiliente  |
+|  Taxa de concorrência  |  Medir a capacidade de uso simultâneo da aplicação por vários usuários  |  Mede quantos usuários estão utilizando a aplicação simultaneamente  |  Medida quantitativa de acessos simultâneos |  Testes na fase de desenvolvimento e versões alfa e beta  |  Dimensionar adequadamente a infraestrutura para a demanda esperada  |
+|  Tempo de carregamento  |  Calcular o tempo necessário para o carregamento da aplicação  | Um carregamento rápido melhora a experiência do usuário  | Média do tempo necessário para execução da aplicação e suas funções  |  Testes e relatórios de uso pelos usuários  |  Deixar a aplicação mais ágil de modo a fazer a experiência do usuário mais agradável  |
 
-Usar o seguinte modelo: 
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+Todas as informações para gerar os indicadores estarão no diagrama de classe a ser apresentado a posteriori. 
 
 ## Requisitos
 
