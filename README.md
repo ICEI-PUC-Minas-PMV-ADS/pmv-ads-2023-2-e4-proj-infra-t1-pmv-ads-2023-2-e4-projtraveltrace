@@ -10,6 +10,7 @@ Aplicação web e mobile de fácil usabilidade que possibilita organizar roteiro
 
 ## Integrantes
 
+* Armando Xavier de Amorim
 * Francisco Costa Ribeiro
 * Gabriel Aston Ferreira Costa
 * Gabriel Vinícius Silveira e Silva
