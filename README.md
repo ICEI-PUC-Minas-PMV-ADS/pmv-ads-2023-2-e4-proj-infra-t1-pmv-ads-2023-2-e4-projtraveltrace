@@ -13,7 +13,7 @@ Aplicação web e mobile de fácil usabilidade que possibilita organizar roteiro
 * Armando Xavier de Amorim
 * Francisco Costa Ribeiro
 * Gabriel Aston Ferreira Costa
-* Gabriel Vinícius Silveira e Silva
+* Gabriel Vinícius Silveira e Silva Ildefonso
 * Laura Santos Andrade
 * Mariana Júlia Estevam Corrêa
 * Ricardo Peixoto da Silva
