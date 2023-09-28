@@ -76,5 +76,35 @@ router.post('/authenticate', async (req, res) => {
   });
 });
 
+// Rota para excluir um usuário pelo ID
+router.delete('/users/:userId', async (req, res) => {
+  try {
+    const userId = req.params.userId;
+
+    // Verifica se o usuário com o ID fornecido existe no banco de dados
+    const user = await UserModel.findById(userId);
+
+    if (!user) {
+      return res.status(404).json({
+        error: true,
+        message: 'Usuário não encontrado'
+      });
+    }
+
+    // Remove o usuário do banco de dados
+    await UserModel.findByIdAndRemove(userId);
+
+    return res.json({
+      success: true,
+      message: 'Usuário excluído com sucesso'
+    });
+  } catch (error) {
+    return res.status(500).json({
+      error: true,
+      message: 'Erro ao excluir o usuário'
+    });
+  }
+});
+
 // Exporta o objeto de roteamento para uso em outras partes do aplicativo
 module.exports = router;
