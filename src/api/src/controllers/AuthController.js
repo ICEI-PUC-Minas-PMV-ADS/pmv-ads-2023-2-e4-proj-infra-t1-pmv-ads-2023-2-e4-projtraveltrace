@@ -1,71 +1,80 @@
-const express = require('express')
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
-const authConfig = require('../config/auth.json')
+// Importa as bibliotecas e módulos necessários
+const express = require('express');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const authConfig = require('../config/auth.json');
+const UserModel = require('../models/user');
 
-const UserModel = require('../models/user')
+// Cria um objeto de roteamento do Express
+const router = express.Router();
 
-const router = express.Router() 
-
+// Função para gerar um token JWT
 const generateToken = (user = {}) => {
   return jwt.sign({
-    id: user.id, 
+    id: user.id,
     name: user.name
   }, authConfig.secret, {
-    expiresIn: 86400
-  })
-   
+    expiresIn: 86400 // O token expira em 24 horas (86400 segundos)
+  });
 }
 
-router.post('/register', async(req, res) => {
+// Rota para registro de usuários
+router.post('/register', async (req, res) => {
+  const { email } = req.body;
 
-  const {email} = req.body
-
-  if (await UserModel.findOne({email})){
+  // Verifica se o usuário já está cadastrado no banco de dados
+  if (await UserModel.findOne({ email })) {
     return res.status(400).json({
-      error: true, 
+      error: true,
       message: "Usuário já cadastrado"
-    })
+    });
   }
 
-  const user = await UserModel.create(req.body)
+  // Cria um novo usuário com base nos dados fornecidos na requisição
+  const user = await UserModel.create(req.body);
 
-  user.password = undefined
-  
+  // Remove a senha do usuário da resposta
+  user.password = undefined;
+
+  // Retorna os dados do usuário e um token JWT
   return res.json({
-    user, 
+    user,
     token: generateToken(user)
-  })
-})
+  });
+});
 
-//procedimento para autenticação, verificar se usuário existe no banco de dados
-router.post('/authenticate', async(req, res) =>{
-  const {email, password} = req.body
+// Rota para autenticação de usuários
+router.post('/authenticate', async (req, res) => {
+  const { email, password } = req.body;
 
-  const user = await UserModel.findOne({email}).select('+password')
-    
-  if(!user){
+  // Procura o usuário no banco de dados pelo email
+  const user = await UserModel.findOne({ email }).select('+password');
+
+  // Verifica se o usuário não foi encontrado
+  if (!user) {
     return res.status(400).json({
-      error: true, 
-      message: 'User not found'
-    })
+      error: true,
+      message: 'Usuário não encontrado'
+    });
   }
 
-  if(!await bcrypt.compare(password, user.password)){
+  // Compara a senha fornecida com a senha armazenada no banco de dados
+  if (!await bcrypt.compare(password, user.password)) {
     return res.status(400).send({
       error: true,
-      message: 'Invalid password'
-    })
+      message: 'Senha inválida'
+    });
   }
 
-  user.password = undefined
+  // Remove a senha do usuário da resposta
+  user.password = undefined;
 
-   return res.json({
-    user, 
+  // Retorna os dados do usuário e um token JWT
+  return res.json({
+    user,
     token: generateToken(user)
-  })
+  });
+});
 
-
-})
-
-module.exports = router
+// Exporta o objeto de roteamento para uso em outras partes do aplicativo
+module.exports = router;
