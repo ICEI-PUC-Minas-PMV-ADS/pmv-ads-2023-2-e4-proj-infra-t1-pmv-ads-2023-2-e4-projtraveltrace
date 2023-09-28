@@ -1,4 +1,4 @@
-// Importa a biblioteca mongoose para a conexão com o MongoDB
+// Importa a biblioteca mongoose para a conexão com o MongoDB 
 const mongoose = require('mongoose');
 
 // Estabelece uma conexão com o MongoDB usando a URL de conexão fornecida
