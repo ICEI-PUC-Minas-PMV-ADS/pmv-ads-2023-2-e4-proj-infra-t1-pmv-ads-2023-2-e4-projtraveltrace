@@ -1,18 +1,18 @@
 {
-  "name": "api1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "api1", //Nome da API
+  "version": "1.0.0", //Versão da API
+  "description": "API para aplicação distribuída de planejamento de viagens", 
+  "main": "index.js", //Arquivo principal que será executado ao iniciar o projeto
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1" // Script de teste
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Grupo 2",
+  "license": "ISC", // Tipo de licença do projeto (ISC é uma licença padrão do Node.js)
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^7.5.2"
+    "bcryptjs": "^2.4.3",  //Biblioteca para criptografar senhas
+    "express": "^4.18.2",  //Framework para projetos web para Node.js
+    "jsonwebtoken": "^9.0.2",  //Biblioteca para gerar e validar tokens JWT
+    "mongoose": "^7.5.2"  // Biblioteca para interagir com o MongoDB
   }
 }
