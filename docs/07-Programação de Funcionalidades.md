@@ -55,7 +55,7 @@ const UserSchema = new mongoose.Schema({<br>
 <br>const User = mongoose.model('User', UserSchema);
 
 // Exporta o modelo para uso em outras partes do aplicativo
-<br\\\\\\\\.module.exports = User;
+<br>module.exports = User;
 
 ### Apontamentos
 O código começa importando as bibliotecas mongoose e bcryptjs. O mongoose é uma biblioteca ODM (Object-Document Mapping) usada para interagir com o banco de dados MongoDB, enquanto bcryptjs é usado para criptografar senhas.
@@ -76,6 +76,60 @@ Finalmente, o modelo de usuário é exportado para que possa ser utilizado em ou
 5. O hash da senha substitui a senha original no objeto de usuário.
 6. O usuário é salvo no banco de dados MongoDB com a senha criptografada.
 7. O servidor responde com uma confirmação de criação de conta.
+
+
+## Server
+O server.js é a instância que concatena todas as partes da API e a coloca em estado funcional, inicializa os controladores de rotas, cria o aplicativo em si, e efetivamente inicia o funcionamento do servidor da API.
+
+// Importa o framework Express
+<br>const express = require('express');
+
+// Importa os controladores (controllers) necessários
+<br>const AuthController = require('./controllers/AuthController');
+<br>const AdminController = require('./controllers/AdminController');
+
+// Importa o middleware de autenticação personalizado
+<br>const authenticateMiddleware = require('./middlewares/authenticate');
+
+// Cria uma instância do aplicativo Express
+<br>const app = express();
+
+// Define o uso do middleware para análise de JSON nas solicitações
+<br>app.use(express.json());
+
+// Define rotas e controladores
+<br>// Rota '/auth' com AuthController
+<br>app.use('/auth', AuthController);
+
+// Rota '/admin' com autenticação usando o middleware authenticateMiddleware
+<br>app.use('/admin', authenticateMiddleware, AdminController);
+
+// Inicia o servidor na porta 3001
+<br>app.listen(3001, () => {
+  <br>console.log('O servidor está rodando na porta 3001');
+<br>});
+
+### Apontamentos
+O código começa importando o framework Express, que é usado para criar e gerenciar servidores HTTP em Node.js.
+
+Em seguida, os controladores AuthController e AdminController são importados. Esses controladores são responsáveis por lidar com as solicitações HTTP nas rotas correspondentes.
+
+O middleware de autenticação personalizado authenticateMiddleware também é importado. Ele será usado para autenticar as solicitações na rota '/admin'.
+
+Uma instância do aplicativo Express é criada usando express().
+
+O aplicativo Express é configurado para analisar o corpo das solicitações como JSON usando express.json().
+
+Rotas e controladores são definidos usando app.use(). A rota '/auth' está associada ao AuthController, e a rota '/admin' está associada ao AdminController, com autenticação sendo aplicada por meio do middleware authenticateMiddleware.
+
+O servidor é iniciado na porta 3001 usando app.listen(), e uma mensagem de log é exibida para indicar que o servidor está rodando.
+
+### Sequência
+
+1. As solicitações de entrada são recebidas pelo aplicativo Express na porta 3001.
+2. O middleware express.json() analisa o corpo das solicitações JSON.
+3. As solicitações com destino à rota '/auth' são encaminhadas para o AuthController.
+4. As solicitações com destino à rota '/admin' passam pelo middleware authenticateMiddleware para autenticação antes de serem encaminhadas para o AdminController.
 
 
 
