@@ -131,7 +131,96 @@ O servidor é iniciado na porta 3001 usando app.listen(), e uma mensagem de log 
 3. As solicitações com destino à rota '/auth' são encaminhadas para o AuthController.
 4. As solicitações com destino à rota '/admin' passam pelo middleware authenticateMiddleware para autenticação antes de serem encaminhadas para o AdminController.
 
+## Middleware
+O middleware 'authenticate.js' é utilizado para realizar a autenticação de solicitações, gerando um token que será verificado ao longo da utilização da aplicação pelo usuário.  
 
+// Importa a biblioteca jsonwebtoken (JWT) para autenticação
+<br>const jwt = require('jsonwebtoken');
+
+// Importa a configuração de autenticação (segredo, expiração, etc.) do arquivo auth.json
+<br>const authConfig = require('../config/auth.json');
+
+// Exporta o middleware de autenticação para uso em rotas protegidas
+<br>module.exports = (req, res, next) => {
+  <br>// Obtém o cabeçalho de autorização da solicitação
+  <br>const authHeader = req.headers.authorization;
+
+  // Verifica se o cabeçalho de autorização está ausente
+  <br>if (!authHeader) {
+    <br>return res.status(401).json({
+      <br>error: true,
+      <br>message: 'Token não provido',
+    <br>});
+  <br>}
+
+  // Divide o cabeçalho de autorização em partes (Bearer e o token)
+  <br>const parts = authHeader.split(' ');
+
+  // Verifica se o token está no formato adequado (Bearer <token>)
+  <br>if (parts.length !== 2) {
+    <br>return res.status(401).json({
+      <br>error: true,
+      <br>message: 'Tipo de token inválido',
+    <br>});
+  <br>}
+
+  const [scheme, token] = parts;
+
+  // Verifica se o esquema do token é "Bearer"
+  <br>if (scheme.indexOf('Bearer') !== 0) {
+    <br>return res.status(401).json({
+      <br>error: true,
+      <br>message: 'Token mal formatado',
+    <br>});
+  <br>}
+
+  // Verifica a validade e autentica o token usando o segredo do auth.json
+  <br>return jwt.verify(token, authConfig.secret, (err, decoded) => {
+    <br>if (err) {
+      <br>return res.status(401).json({
+        <br>error: true,
+        <br>message: 'Token inválido/expirado',
+      <br>});
+    <br>}
+
+// Anexa os dados do usuário decodificado à solicitação para uso posterior
+<br>req.userLogged = decoded;
+
+// Continua o fluxo de execução para a próxima função/middleware
+<br>return next();
+<br>});
+<br>};
+
+### Apontamentos
+O middleware authenticate.js é responsável pela autenticação de solicitações nas rotas protegidas.
+
+Ele começa importando a biblioteca jsonwebtoken (JWT) para lidar com a autenticação baseada em tokens JWT.
+
+Também importa a configuração de autenticação do arquivo auth.json, que contém o segredo usado para verificar a assinatura dos tokens.
+
+O middleware verifica se o cabeçalho de autorização (Authorization) está presente na solicitação.
+
+Em seguida, verifica se o cabeçalho de autorização está no formato correto, consistindo em duas partes: o esquema (geralmente "Bearer") e o token JWT.
+
+Confirma que o esquema do token é "Bearer".
+
+Utiliza a função jwt.verify para verificar a validade do token JWT usando o segredo especificado no auth.json. Se o token for válido, ele é decodificado, e as informações do usuário são anexadas à solicitação (req.userLogged).
+
+O middleware chama next() para permitir que a solicitação continue seu fluxo para as funções ou middlewares subsequentes na rota protegida.
+
+### Sequência
+
+1. A solicitação é recebida por uma rota protegida do aplicativo.
+2. O middleware authenticate verifica a presença do cabeçalho de autorização.
+3. Se o cabeçalho de autorização estiver ausente, ele responde com um erro 401 (Não Autorizado) e uma mensagem indicando que o token não foi fornecido.
+4. Se o cabeçalho de autorização estiver presente, o middleware verifica o formato do token.
+5. Se o formato do token for inválido, ele responde com um erro 401 e uma mensagem de tipo de token inválido.
+6. Se o formato do token for válido, o middleware verifica se o esquema é "Bearer".
+7. Se o esquema não for "Bearer", ele responde com um erro 401 e uma mensagem de token mal formatado.
+8. Se o token seguir o formato correto, o middleware verifica a validade do token usando o segredo especificado no auth.json.
+9. Se o token for inválido ou expirado, ele responde com um erro 401 e uma mensagem de token inválido/expirado.
+10. Se o token for válido, o middleware decodifica o token e anexa as informações do usuário à solicitação.
+11. O fluxo da solicitação continua para a próxima função ou middleware na rota protegida.
 
 
 
