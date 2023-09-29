@@ -222,7 +222,48 @@ O middleware chama next() para permitir que a solicitação continue seu fluxo p
 10. Se o token for válido, o middleware decodifica o token e anexa as informações do usuário à solicitação.
 11. O fluxo da solicitação continua para a próxima função ou middleware na rota protegida.
 
+## Database
+O database cuida da interação com o servidor NoSQL da aplicação. Este código é responsável por estabelecer uma conexão com o MongoDB e configurar os ouvintes de eventos para monitorar o status da conexão. Ele também garante que a Promise do mongoose esteja configurada corretamente.
 
+// Importa a biblioteca mongoose para a conexão com o MongoDB
+<br>const mongoose = require('mongoose');
+
+// Estabelece uma conexão com o MongoDB usando a URL de conexão fornecida
+<br>mongoose.connect('mongodb+srv://ssgabrielvinicius:TravelTracePucMinas@api-1-mongo.c5c63mb.mongodb.net/?retryWrites=true&w=majority');
+
+// Configura os ouvintes de eventos para a conexão com o MongoDB
+<br>mongoose.connection.on('connected', () => {
+  <br>console.log('Conexão ao MongoDB estabelecida com sucesso');
+<br>});
+
+mongoose.connection.on('error', (err) => {
+ <br> console.error('Erro na conexão com o MongoDB:', err);
+<br>});
+
+mongoose.connection.on('disconnected', () => {
+ <br> console.log('Desconectado do MongoDB');
+<br>});
+
+// Configura a Promise do mongoose para ser global
+<br>mongoose.Promise = global.Promise;
+
+// Exporta a instância de mongoose para uso em outros módulos
+<br>module.exports = mongoose;
+
+### Apontamentos
+O código importa a biblioteca mongoose, que é usada para estabelecer e interagir com conexões do MongoDB.
+
+Em seguida, o código estabelece uma conexão com o MongoDB usando a URL de conexão fornecida no método mongoose.connect(). Essa URL deve incluir as credenciais de acesso ao banco de dados.
+
+Configura os ouvintes de eventos para a conexão com o MongoDB:
+
+- mongoose.connection.on('connected'): Esse evento é disparado quando a conexão com o MongoDB é estabelecida com sucesso. Uma mensagem de log é exibida indicando a conexão bem-sucedida.
+- mongoose.connection.on('error'): Esse evento é disparado quando ocorre um erro na conexão com o MongoDB. Uma mensagem de erro é registrada no console.
+- mongoose.connection.on('disconnected'): Esse evento é disparado quando a conexão com o MongoDB é desconectada. Uma mensagem de log é exibida indicando a desconexão.
+
+A Promise do mongoose é configurada para ser global usando mongoose.Promise = global.Promise. Isso garante que o mongoose use a Promise nativa do Node.js.
+
+Por fim, a instância de mongoose é exportada para que possa ser usada em outros módulos do aplicativo.
 
 
 
