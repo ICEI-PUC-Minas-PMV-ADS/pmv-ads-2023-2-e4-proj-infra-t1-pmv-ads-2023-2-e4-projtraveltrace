@@ -22,19 +22,19 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-# Página Principal
+### Página Principal
 ![Pagina Principal](img/pagina_principal.png)
 
-# Cadastro
+### Cadastro
 ![Cadastro](img/cadastro.png)
 
-# Login
+### Login
 ![Login](img/login.png)
 
-# Orçamento
+### Orçamento
 ![Orçamento](img/orcamento.png)
 
-# Roteiro
+### Roteiro
 ![Roteiro](img/roteiro.png)
 
 
