@@ -275,6 +275,36 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 
 Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
+|RF-002| Exibir anúncios e promoções relacionadas a viagens. 
+
+![Alt text](ImageATelaInicial.jpeg)
+
+|RF-001| Oferecer opções de login e cadastro.
+
+|RF-003| Verificar as credenciais e autenticar os usuários.
+
+|RF-004| Fornecer opção de redefinição de senha.
+
+![Alt text](ImageBLogin.jpeg)
+
+|RF-005| Permitir atualização dos dados do usuário. 
+
+![Alt text](ImageCCadastro.jpeg)
+
+|RF-006| Permitir adição de despesas.
+
+|RF-007| Calcular total de despesas e saldo disponível.
+
+|RF-008| Classificar e exibir despesas por categorias.
+
+![Alt text](ImageDOrcamento.jpeg)
+
+|RF-009| Permitir criação e edição de um itinerário.
+
+|RF-010| Permitir adição de destinos, atividades e notas.
+
+![Alt text](ImageERoteiro.jpeg)
+
 > **Links Úteis**:
 >
 > - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
