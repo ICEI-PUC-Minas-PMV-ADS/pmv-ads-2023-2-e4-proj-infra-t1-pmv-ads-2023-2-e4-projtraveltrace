@@ -17,6 +17,7 @@ Aplicação web e mobile de fácil usabilidade que possibilita organizar roteiro
 * Laura Santos Andrade
 * Mariana Júlia Estevam Corrêa
 * Ricardo Peixoto da Silva
+* Vinicius Luiz Alves de Oliveira
 
 ## Orientador
 
