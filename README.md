@@ -10,14 +10,8 @@ Aplicação web e mobile de fácil usabilidade que possibilita organizar roteiro
 
 ## Integrantes
 
-* Armando Xavier de Amorim
-* Francisco Costa Ribeiro
-* Gabriel Aston Ferreira Costa
-* Gabriel Vinícius Silveira e Silva Ildefonso
-* Laura Santos Andrade
-* Mariana Júlia Estevam Corrêa
-* Ricardo Peixoto da Silva
-* Vinicius Luiz Alves de Oliveira
+| [<img src="https://avatars.githubusercontent.com/u/85715072?v=4" width=115><br><sub>Laura Andrade </sub>](https://github.com/LauraAndradd) | [<img src="https://avatars.githubusercontent.com/u/101571743?v=4" width=115><br><sub>Gabriel Idelfonso </sub>](https://github.com/gabriel-ildefonso) | [<img src="https://avatars.githubusercontent.com/u/102702197?v=4" width=115><br><sub>Mariana Correa </sub>](https://github.com/MarianaJuliaCorrea) | [<img src="https://avatars.githubusercontent.com/u/103853727?v=4" width=115><br><sub>Francisco Costa </sub>](https://github.com/FcostaR) | [<img src="https://avatars.githubusercontent.com/u/103431710?v=4" width=115><br><sub>Gabriel Aston </sub>](https://github.com/Gabriel-Aston) | [<img src="https://avatars.githubusercontent.com/u/103431797?v=4" width=115><br><sub>Ricardo Peixoto </sub>](https://github.com/RcardoPs) | [<img src="https://avatars.githubusercontent.com/u/103579574?v=4" width=115><br><sub>Vinicius Luiz </sub>](https://github.com/viniciussluiz) | [<img src="" width=115><br><sub>Armando Xavier </sub>](https://github.com/ArmandoX1182) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 
 ## Orientador
 
