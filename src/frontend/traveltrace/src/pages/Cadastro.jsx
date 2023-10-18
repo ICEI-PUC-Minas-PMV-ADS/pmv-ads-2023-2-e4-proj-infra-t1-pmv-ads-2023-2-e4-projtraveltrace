@@ -8,9 +8,6 @@ export default function Cadastro() {
         <h1>Cadastro</h1>
         <Link to="/login">Go Back</Link>
       </>
-    
-    
-    
-    
+         
     )
 }
