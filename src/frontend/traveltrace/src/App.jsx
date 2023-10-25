@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx"
 import Cadastro from "./pages/Cadastro"
 import Login from "./pages/Login"
 import NoPage from "./pages/NoPage"
+import Principal from "./pages/Principal.jsx"
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="home" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="principal" element={<Principal />} />
         </Route>
       </Routes>
     </BrowserRouter>
