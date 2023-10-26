@@ -1,12 +1,26 @@
 # Template Padrão da Aplicação
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
+O layout a seguir é padrão da aplicação e será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
-Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+# Home
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+![Home](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/bce3fb2c-a8e0-4c08-9aee-27b1cbf7c6a3)
+
+# Login
+
+![Login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/3fa0d5c3-4286-4e6b-a390-275f32291f70)
+
+# Cadastro
+
+![Cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/67cd294d-53e8-47ab-a0bf-7868573931cf)
+
+# Principal
+
+![Principal](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/29228e95-3145-45a6-a5ce-e7908f7ead95)
+
+# Roteiro
+
+![Roteiro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-projtraveltrace/assets/103853727/10df89b2-86a9-4970-ba59-e1a45df9f844)
+
+# Orçamento
+
