@@ -1,13 +1,26 @@
-import React from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../assets/traveltrace.svg'
-import banner from '../assets/blog-viagem.jpg'
-import './Blog.css'
+import React, { useState } from 'react';
+import banner from '../assets/blog-viagem.jpg';
+import './Blog.css';
 
 function Blog() {
-    const [name, setName] = useState("")
-    const [description, setDescription] = useState("")
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [isPublished, setIsPublished] = useState(false);
+
+    const handleTitleChange = (e) => {
+        setTitle(e.target.value);
+    };
+
+    const handleDescriptionChange = (e) => {
+        setDescription(e.target.value);
+    };
+
+    const handlePublish = () => {
+        if (title && description) {
+            // Publicar o conteúdo aqui
+            setIsPublished(true);
+        }
+    };
 
     return (
         <div className="container">
@@ -16,39 +29,51 @@ function Blog() {
             </div>
 
             <div className="wrap-blog">
-                        <form className="blog-form">
-                            <span className="blog-form-title">
-                                <img src={logo} alt="Travel Trace" />
-                            </span>
-                            <span className="blog-form-title">Comente aqui sobre sua experiência!</span>
+                <form className="blog-form">
+                    <div className="blog-form-title">Comente aqui sobre sua experiência!</div>
 
-                            <div className='wrap-input'>
-                                <input className={name !== "" ? 'has-val input' : 'input'}
-                                    type='text' value={name} onChange={e => setName(e.target.value)} />
-                                <span className='focus-input' data-placeholder='Nome'></span>
-                            </div>
-
-                            <div className="wrap-input">
-                                <textarea
-                                    className={description !== "" ? 'has-val input' : 'input'}
-                                    value={description}
-                                    onChange={e => setDescription(e.target.value)}
-                                    placeholder="Descrição"
-                                    rows="6"
-                                ></textarea>
-                            </div>
-
-                            <div className='wrap-input'>
-                                <input type="file" id="fileInput" accept="image/*" />
-                            </div>
-
-                            <div className='container-blog-form-btn'>
-                                <button className='blog-form-btn'>Publicar</button>
-                            </div>
-                        </form>
+                    <div className='wrap-input'>
+                        <label className="input-label bold-label" htmlFor="title">Título</label>
+                        <input
+                            className="input"
+                            type='text'
+                            id="title"
+                            value={title}
+                            onChange={handleTitleChange}
+                        />
                     </div>
-                </div>
+
+                    <div className="wrap-input">
+                        <label className="input-label bold-label" htmlFor="description">Descrição da viagem</label>
+                        <textarea
+                            className="input"
+                            id="description"
+                            value={description}
+                            onChange={handleDescriptionChange}
+                            rows="6"
+                        ></textarea>
+                    </div>
+
+                    <div className='wrap-input'>
+                        <input
+                            type="file"
+                            id="fileInput"
+                            accept="image/*"
+                        />
+                    </div>
+
+                    <div className='container-blog-form-btn'>
+                        <button className={`blog-form-btn ${(!title || !description) ? 'disabled' : ''}`} onClick={handlePublish} disabled={!title || !description}>
+                            Publicar
+                        </button>
+                    </div>
+
+                    {isPublished && <div className="success-message">Conteúdo publicado com sucesso!</div>}
+                </form>
+            </div>
+        </div>
     );
 }
 
 export default Blog;
+
