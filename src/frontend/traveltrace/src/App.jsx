@@ -4,6 +4,7 @@ import Cadastro from "./pages/Cadastro"
 import Login from "./pages/Login"
 import Blog from "./pages/Blog.jsx"
 import NoPage from "./pages/NoPage"
+import Principal from "./pages/Principal.jsx";
 
 export default function App() {
   return (
