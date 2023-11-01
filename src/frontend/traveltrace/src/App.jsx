@@ -5,6 +5,7 @@ import Login from "./pages/Login"
 import Blog from "./pages/Blog.jsx"
 import NoPage from "./pages/NoPage"
 import Principal from "./pages/Principal.jsx";
+import Orcamento from "./pages/Orcamento.jsx"
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="*" element={<NoPage />} />
           <Route path="principal" element={<Principal />} />
+          <Route path="orcamento" element={<Orcamento />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -239,3 +239,5 @@ function Orcamento() {
     </div>
   );
 }
+
+export default Orcamento;
