@@ -1,38 +1,37 @@
+from rest_framework import viewsets
 from django.shortcuts import render, redirect
-from .models import Viagem, PostagemBlog, Viagem
-from .forms import ViagemForm, PostagemBlogForm
+from .models import CustomUser, Viagem, DiarioViagens
+from .serializer import CustomUserSerializer, ViagemSerializer, DiarioViagensSerializer
+from rest_framework import generics
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework_simplejwt.tokens import RefreshToken
+from .models import CustomUser
+from rest_framework.decorators import authentication_classes, permission_classes
 
-def cria_viagem(request):
-    """
-    Visualização para criar uma nova viagem.
-    """
-    if request.method == 'POST':
-        form = ViagemForm(request.POST)
-        if form.is_valid():
-            viagem = form.save()
-            return redirect('lista_viagens')  # Redireciona para a lista de viagens após a criação
-    else:
-        form = ViagemForm()
-    return render(request, 'viagens/cria_viagem.html', {'form': form})
+@authentication_classes([])
+@permission_classes([])
+class CustomUserCreateView(generics.CreateAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
 
-def cria_postagem_blog(request):
-    """
-    Visualização para criar uma nova postagem de blog.
-    """
-    if request.method == 'POST':
-        form = PostagemBlogForm(request.POST)
-        if form.is_valid():
-            postagem = form.save(commit=False)
-            postagem.autor = request.user  # Define o autor da postagem como o usuário atualmente logado
-            postagem.save()
-            return redirect('lista_postagens_blog')  # Redireciona para a lista de postagens do blog após a criação
-    else:
-        form = PostagemBlogForm()
-    return render(request, 'blog/cria_postagem.html', {'form': form})
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        user = CustomUser.objects.get(username=serializer.validated_data['username'])
+        refresh = RefreshToken.for_user(user)
+        return Response({
+            'refresh': str(refresh),
+            'access': str(refresh.access_token),
+        }, status=status.HTTP_201_CREATED)
 
-def lista_postagens_blog(request):
-    """
-    Visualização para listar todas as postagens de blog.
-    """
-    postagens = PostagemBlog.objects.all().order_by('-data_publicacao')
-    return render(request, 'blog/lista_postagens.html', {'postagens': postagens})
+class ViagemViewSet(viewsets.ModelViewSet):
+    """Exibindo todas as viagens"""
+    queryset = Viagem.objects.all()
+    serializer_class = ViagemSerializer
+
+class DiarioViewSet(viewsets.ModelViewSet):
+    """Exibindo todos os posts do Diário de viagens"""
+    queryset = DiarioViagens.objects.all()
+    serializer_class = DiarioViagensSerializer

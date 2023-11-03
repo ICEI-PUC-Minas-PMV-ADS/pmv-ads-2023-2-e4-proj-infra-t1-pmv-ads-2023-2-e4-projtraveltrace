@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'rest_framework',
+    'rest_framework_simplejwt',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +51,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'app.urls'
 
@@ -128,3 +133,24 @@ MEDIA_URL = '/media/'  # URL para servir arquivos de mídia (imagens, uploads, e
 MEDIA_ROOT = BASE_DIR / 'media'  # Caminho absoluto para a pasta de mídia
 
 DATE_INPUT_FORMATS = ['%d/%m/%Y']
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
+from datetime import timedelta
+
+# Configuração do Django Simple JWT
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # Tempo de vida do token de acesso
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),  # Tempo de vida do token de atualização
+    'SLIDING_TOKEN_LIFETIME': timedelta(days=1),  # Tempo de vida do token de atualização deslizante
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),  # Tempo de vida do token de atualização deslizante
+    'SLIDING_TOKEN_LIFETIME_REFRESH_LIFETIME': True,
+    'SLIDING_TOKEN_REFRESH_LIFETIME_LIFETIME': True,
+}

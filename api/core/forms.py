@@ -1,5 +1,5 @@
 from django import forms
-from .models import Viagem, PostagemBlog
+from .models import Pessoa, Viagem, DiarioViagens
 
 class ViagemForm(forms.ModelForm):
     """
@@ -14,10 +14,10 @@ class ViagemForm(forms.ModelForm):
         }
 
 
-class PostagemBlogForm(forms.ModelForm):
+class DiarioViagensForm(forms.ModelForm):
     """
     Formulário para criar ou editar uma postagem de blog.
     """
     class Meta:
-        model = PostagemBlog
+        model = DiarioViagens
         fields = ['titulo', 'conteudo']
