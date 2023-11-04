@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
 
 from django.contrib.auth.models import AbstractUser
+from django.core.validators import MinValueValidator
 
 class CustomUser(AbstractUser):
     # Campos padrão do Django (username, email, etc)
@@ -50,19 +51,20 @@ class Viagem(models.Model):
     data_inicio = models.DateField()
     data_fim = models.DateField()
     descricao = models.TextField()
-    valor = models.DecimalField(max_digits=10, decimal_places=2, default=1000.00)
+    valor = models.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(0.01)])
+
+    def __str__(self):
+        return f"{self.pais}, {self.cidade}"
 
 class DiarioViagens(models.Model):
     """
     Modelo para representar uma postagem do Diário.
 
     Campos:
-    - autor: A pessoa logada que vai postar.
     - titulo: O título da postagem.
     - conteudo: O conteúdo da postagem.
     - data_publicacao: A data de publicação da postagem.
     """
-    autor = models.ForeignKey(User, on_delete=models.CASCADE)
     titulo = models.CharField(max_length=200)
     conteudo = models.TextField()
     data_publicacao = models.DateTimeField(auto_now_add=True)

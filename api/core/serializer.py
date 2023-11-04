@@ -41,4 +41,4 @@ class ViagemSerializer(serializers.ModelSerializer):
 class DiarioViagensSerializer(serializers.ModelSerializer):
     class Meta:
         model = DiarioViagens
-        fields = ['autor', 'titulo', 'conteudo', 'data_publicacao']
+        fields = ['titulo', 'conteudo', 'data_publicacao']

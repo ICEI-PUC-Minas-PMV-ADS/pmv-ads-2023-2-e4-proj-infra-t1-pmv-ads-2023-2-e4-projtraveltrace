@@ -10,7 +10,7 @@ class ViagensAdmin(admin.ModelAdmin):
 admin.site.register(Viagem, ViagensAdmin)
 
 class PostsViagensAdmin(admin.ModelAdmin):
-    list_display = ('id', 'autor', 'conteudo', 'data_publicacao')
+    list_display = ('id', 'conteudo', 'data_publicacao')
     list_display_links = ('id',)  
 
 admin.site.register(DiarioViagens, PostsViagensAdmin)
