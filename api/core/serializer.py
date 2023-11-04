@@ -1,10 +1,23 @@
 from rest_framework import serializers
 from core.models import Viagem, DiarioViagens, CustomUser
 from django.contrib.auth.models import User
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+
+        token['email'] = user.email
+
+        return token
 
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = CustomUser
+        model = User  # Use o modelo de usuário padrão do Django
         fields = ('id', 'username', 'email', 'password')
 
     extra_kwargs = {
@@ -12,7 +25,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
     }
 
     def create(self, validated_data):
-        user = CustomUser(
+        user = User(
             username=validated_data['username'],
             email=validated_data['email']
         )

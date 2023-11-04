@@ -6,8 +6,7 @@ from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
-    # Campos padrão do Django (username, email, etc.)
-    # Adicione os campos personalizados aqui
+    # Campos padrão do Django (username, email, etc)
     groups = models.ManyToManyField(
         'auth.Group',
         related_name='customuser_set', 

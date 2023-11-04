@@ -1,13 +1,14 @@
 from rest_framework import viewsets
 from django.shortcuts import render, redirect
 from .models import CustomUser, Viagem, DiarioViagens
-from .serializer import CustomUserSerializer, ViagemSerializer, DiarioViagensSerializer
+from .serializer import CustomTokenObtainPairSerializer, CustomUserSerializer, ViagemSerializer, DiarioViagensSerializer
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import CustomUser
 from rest_framework.decorators import authentication_classes, permission_classes
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 @authentication_classes([])
 @permission_classes([])
@@ -19,12 +20,10 @@ class CustomUserCreateView(generics.CreateAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
-        user = CustomUser.objects.get(username=serializer.validated_data['username'])
-        refresh = RefreshToken.for_user(user)
-        return Response({
-            'refresh': str(refresh),
-            'access': str(refresh.access_token),
-        }, status=status.HTTP_201_CREATED)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer
 
 class ViagemViewSet(viewsets.ModelViewSet):
     """Exibindo todas as viagens"""
