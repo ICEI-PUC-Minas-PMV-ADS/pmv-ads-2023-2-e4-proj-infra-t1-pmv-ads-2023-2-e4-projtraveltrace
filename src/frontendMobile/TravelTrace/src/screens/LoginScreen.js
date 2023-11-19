@@ -33,7 +33,7 @@ export default function LoginScreen({ navigation }) {
     <Background>
       <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Hello.</Header>
+      <Header>Login</Header>
       <TextInput
         label="Email"
         returnKeyType="next"
@@ -47,7 +47,7 @@ export default function LoginScreen({ navigation }) {
         keyboardType="email-address"
       />
       <TextInput
-        label="Password"
+        label="Senha"
         returnKeyType="done"
         value={password.value}
         onChangeText={(text) => setPassword({ value: text, error: '' })}
@@ -55,22 +55,16 @@ export default function LoginScreen({ navigation }) {
         errorText={password.error}
         secureTextEntry
       />
-      <View style={styles.forgotPassword}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('ResetPasswordScreen')}
-        >
-          <Text style={styles.forgot}>Forgot your password ?</Text>
-        </TouchableOpacity>
-      </View>
+     
       <Button mode="contained" onPress={onLoginPressed}>
-        Log in
+        Login
       </Button>
       <View style={styles.row}>
-        <Text>You do not have an account yet ?</Text> 
+        <Text> Você ainda nao tem conta ?</Text> 
       </View>
       <View style={styles.row}>
       <TouchableOpacity onPress={() => navigation.replace('CadastroScreen')}>
-          <Text style={styles.link}>Create !</Text>
+          <Text style={styles.link}> Cadastrar !</Text>
         </TouchableOpacity>
       </View>
     </Background>
