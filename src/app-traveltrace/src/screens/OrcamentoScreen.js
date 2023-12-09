@@ -8,6 +8,7 @@ import Logo from '../components/Logo';
 import Header from '../components/Header';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button';
+import axios from 'axios'; // Importe o Axios
 import { theme } from '../theme';
 
 export default function OrcamentoScreen({ navigation }) {
@@ -20,7 +21,7 @@ export default function OrcamentoScreen({ navigation }) {
   const [showDataIdaPicker, setShowDataIdaPicker] = useState(false);
   const [showDataVoltaPicker, setShowDataVoltaPicker] = useState(false);
 
-  const onSavePressed = () => {
+  const onSavePressed = async () => {
     // Lógica de validação dos campos de orçamento
 
     // Exemplo simples de validação
@@ -32,8 +33,34 @@ export default function OrcamentoScreen({ navigation }) {
       return;
     }
 
-    // Lógica para salvar o orçamento
-    // navigation.reset({ index: 0, routes: [{ name: 'Dashboard' }] });
+    try {
+      const formattedDtIda = dataIda.toISOString().split('T')[0];
+      const formattedDtVolta = dataVolta.toISOString().split('T')[0];
+
+      const novoOrcamento = {
+        pais: pais.value,
+        cidade: cidade.value,
+        data_inicio: formattedDtIda,
+        data_fim: formattedDtVolta,
+        descricao: descricao.value,
+        valor: valor.value,
+      };
+
+      // Faz a chamada POST com o novo orçamento
+      const response = await axios.post('http://127.0.0.1:8000/viagens/', novoOrcamento);
+
+      // A chamada foi bem-sucedida, você pode lidar com a resposta conforme necessário
+      console.log('Resposta da API:', response.data);
+
+      // Lógica adicional, se necessário
+
+      // navigation.reset({ index: 0, routes: [{ name: 'Dashboard' }] });
+    } catch (error) {
+      console.error('Erro ao salvar orçamento:', error);
+      console.log('Detalhes do erro:', error.response.data);
+
+      // Lógica adicional, se necessário
+    }
   };
 
   const showDataIdaPickerModal = () => {
@@ -62,29 +89,37 @@ export default function OrcamentoScreen({ navigation }) {
     setDataVolta(selectedDate || dataVolta);
   };
 
+  const formatDate = (date) => {
+    const year = date.getFullYear();
+    const month = `0${date.getMonth() + 1}`.slice(-2);
+    const day = `0${date.getDate()}`.slice(-2);
+    return `${year}-${month}-${day}`;
+  };
+
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-    <ScrollView contentContainerStyle={styles.scrollView}>
-    <Background>
-        <BackButton goBack={navigation.goBack} />
-        <Logo />
-        <Header>Orçamento</Header>
-        <TextInput
-          label="País"
-          returnKeyType="next"
-          value={pais.value}
-          onChangeText={(text) => setPais({ value: text, error: '' })}
-          error={!!pais.error}
-          errorText={pais.error}
-        />
-        <TextInput
-          label="Cidade"
-          returnKeyType="next"
-          value={cidade.value}
-          onChangeText={(text) => setCidade({ value: text, error: '' })}
-          error={!!cidade.error}
-          errorText={cidade.error}
-        />
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <Background>
+          <BackButton goBack={navigation.goBack} />
+          <Logo />
+          <Header>Orçamento</Header>
+          <TextInput
+            label="País"
+            returnKeyType="next"
+            value={pais.value}
+            onChangeText={(text) => setPais({ value: text, error: '' })}
+            error={!!pais.error}
+            errorText={pais.error}
+          />
+          <TextInput
+            label="Cidade"
+            returnKeyType="next"
+            value={cidade.value}
+            onChangeText={(text) => setCidade({ value: text, error: '' })}
+            error={!!cidade.error}
+            errorText={cidade.error}
+          />
           <TextInput
             label="Valor"
             returnKeyType="next"
@@ -101,7 +136,7 @@ export default function OrcamentoScreen({ navigation }) {
                 style={styles.datePickerButton}
                 onPress={showDataIdaPickerModal}
               >
-                {dataIda.toLocaleDateString()}
+                {formatDate(dataIda)}
               </PaperButton>
               {showDataIdaPicker && (
                 <DateTimePicker
@@ -110,7 +145,7 @@ export default function OrcamentoScreen({ navigation }) {
                   display="default"
                   onChange={handleDataIdaChange}
                 />
-              )}
+                )}
             </View>
             <View style={styles.datePickerColumn}>
               <Text>Data de Volta</Text>
@@ -118,7 +153,7 @@ export default function OrcamentoScreen({ navigation }) {
                 style={styles.datePickerButton}
                 onPress={showDataVoltaPickerModal}
               >
-                {dataVolta.toLocaleDateString()}
+                {formatDate(dataVolta)}
               </PaperButton>
               {showDataVoltaPicker && (
                 <DateTimePicker
@@ -146,10 +181,10 @@ export default function OrcamentoScreen({ navigation }) {
             style={{ marginTop: 24 }}
           >
             Salvar Orçamento
-        </Button>
-    </Background>
-    </ScrollView>
-  </TouchableWithoutFeedback>
+          </Button>
+        </Background>
+      </ScrollView>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -163,5 +198,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginVertical: 8,
   },
-// Estilos da tela, se necessário
+  datePickerColumn: {
+    flex: 1,
+    marginRight: 8,
+  },
+  datePickerButton: {
+    marginTop: 8,
+  },
+  // Estilos da tela, se necessário
 });

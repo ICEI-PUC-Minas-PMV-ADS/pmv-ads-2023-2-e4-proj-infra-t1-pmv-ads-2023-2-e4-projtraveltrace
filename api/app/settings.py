@@ -135,11 +135,8 @@ MEDIA_ROOT = BASE_DIR / 'media'  # Caminho absoluto para a pasta de mídia
 DATE_INPUT_FORMATS = ['%d/%m/%Y']
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ],
 }
 

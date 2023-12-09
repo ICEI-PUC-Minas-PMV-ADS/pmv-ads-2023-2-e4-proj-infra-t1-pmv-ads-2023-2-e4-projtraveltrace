@@ -45,7 +45,7 @@ function Orcamento() {
         },
       };
 
-      // Faça a chamada POST com o novo orçamento
+      // Faz a chamada POST com o novo orçamento
       await axios.post('http://127.0.0.1:8000/viagens/', novoOrcamento, config);
 
       // A chamada foi bem-sucedida, defina isSaved como true

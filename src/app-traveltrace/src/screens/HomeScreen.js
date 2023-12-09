@@ -23,12 +23,16 @@ const WebLink = ({ navigation }) => {
 
 function HomeScreen({ navigation }) {
   const navigateToOrcamento = () => {
-    navigation.navigate('Orcamento'); // Substitua 'Orcamento' pelo nome da tela de orçamento
+    navigation.navigate('OrcamentoScreen'); // Substitua 'Orcamento' pelo nome da tela de orçamento
   };
 
   const navigateToRotas = () => {
     navigation.navigate('Rotas'); // Substitua 'Rotas' pelo nome da tela de rotas
   };
+
+  const navigateToPlanejamentos = () => {
+    navigation.navigate('PlanejamentosScreen');
+  }
 
   return (
     <Background>
@@ -39,6 +43,9 @@ function HomeScreen({ navigation }) {
       </Button>
       <Button mode="contained" onPress={navigateToRotas}>
         Rotas
+      </Button>
+      <Button mode="contained" onPress={navigateToPlanejamentos}>
+        Meus Planejamentos
       </Button>
       <Header>Indeciso quanto ao destino?</Header>
       <WebLink navigation={navigation} />
