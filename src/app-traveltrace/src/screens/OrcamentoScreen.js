@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, ScrollView, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, ScrollView, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native';
 import { Text, Button as PaperButton } from 'react-native-paper';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import Background from '../components/Background';
@@ -9,7 +9,7 @@ import Header from '../components/Header';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button';
 import axios from 'axios'; // Importe o Axios
-import { theme } from '../theme';
+import { criarTabelaPlanejamentos, salvarPlanejamento } from '../db/PlanejamentoDB';
 
 export default function OrcamentoScreen({ navigation }) {
   const [pais, setPais] = useState({ value: '', error: '' });
@@ -21,46 +21,60 @@ export default function OrcamentoScreen({ navigation }) {
   const [showDataIdaPicker, setShowDataIdaPicker] = useState(false);
   const [showDataVoltaPicker, setShowDataVoltaPicker] = useState(false);
 
-  const onSavePressed = async () => {
-    // Lógica de validação dos campos de orçamento
+  useEffect(() => {
+    criarTabelaPlanejamentos().then(() => {
+      console.log('Tabela de planejamentos criada com sucesso.');
+    }).catch(error => {
+      console.error('Erro ao criar tabela de planejamentos:', error);
+    });
+  }, []);
 
-    // Exemplo simples de validação
-    if (!pais.value || !cidade.value || !valor.value || !dataIda || !dataVolta || !descricao.value) {
-      setPais({ ...pais, error: 'Preencha o país' });
-      setCidade({ ...cidade, error: 'Preencha a cidade' });
-      setValor({ ...valor, error: 'Preencha o valor' });
-      // Adicione validações para dataIda, dataVolta e descricao se necessário
-      return;
-    }
-
-    try {
-      const formattedDtIda = dataIda.toISOString().split('T')[0];
-      const formattedDtVolta = dataVolta.toISOString().split('T')[0];
-
-      const novoOrcamento = {
-        pais: pais.value,
-        cidade: cidade.value,
-        data_inicio: formattedDtIda,
-        data_fim: formattedDtVolta,
-        descricao: descricao.value,
-        valor: valor.value,
+  const handlePlanejamento = async () => {
+    if (pais === '' || cidade === '' || valor === '' || dataIda === '' || dataVolta === '' || descricao === '') {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos');
+    } else {
+      const planejamentoCriado = {
+        pais: pais,
+        cidade: cidade,
+        valor: valor,
+        data_ida: dataIda,
+        data_volta: dataVolta,
+        descricao: descricao,
+        criador: 'usuario_atual',
       };
 
-      // Faz a chamada POST com o novo orçamento
-      const response = await axios.post('http://127.0.0.1:8000/viagens/', novoOrcamento);
-
-      // A chamada foi bem-sucedida, você pode lidar com a resposta conforme necessário
-      console.log('Resposta da API:', response.data);
-
-      // Lógica adicional, se necessário
-
-      // navigation.reset({ index: 0, routes: [{ name: 'Dashboard' }] });
-    } catch (error) {
-      console.error('Erro ao salvar orçamento:', error);
-      console.log('Detalhes do erro:', error.response.data);
-
-      // Lógica adicional, se necessário
+      try {
+        await salvarPlanejamento(planejamentoCriado);
+        Alert.alert(
+          'Sucesso',
+          'Planejamento criado com sucesso!',
+          [
+            {
+              text: 'Início',
+              onPress: () => {
+                limparFormulario();
+                navigation.navigate('HomeScreen');
+              },
+            },
+            {
+              text: 'Novo Planejamento',
+              onPress: () => {
+                limparFormulario();
+              },
+            },
+          ]
+        );
+      } catch (error) {
+        console.error('Erro ao salvar o planejamento:', error);
+      }
     }
+  };
+
+  const limparFormulario = () => {
+    setPais('');
+    setCidade('');
+    setValor('');
+    setDescricao('');
   };
 
   const showDataIdaPickerModal = () => {
@@ -90,12 +104,12 @@ export default function OrcamentoScreen({ navigation }) {
   };
 
   const formatDate = (date) => {
-    const year = date.getFullYear();
-    const month = `0${date.getMonth() + 1}`.slice(-2);
-    const day = `0${date.getDate()}`.slice(-2);
-    return `${year}-${month}-${day}`;
+    if (!(date instanceof Date) || isNaN(date)) {
+      return 'Data Inválida';
+    }
+  
+    return date.toLocaleDateString('pt-BR'); 
   };
-
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -103,7 +117,7 @@ export default function OrcamentoScreen({ navigation }) {
         <Background>
           <BackButton goBack={navigation.goBack} />
           <Logo />
-          <Header>Orçamento</Header>
+          <Header>Planejamento</Header>
           <TextInput
             label="País"
             returnKeyType="next"
@@ -129,7 +143,7 @@ export default function OrcamentoScreen({ navigation }) {
             errorText={valor.error}
             keyboardType="numeric"
           />
-          <View style={styles.datePickerContainer}>
+          <View style={styles.dateContainer}>
             <View style={styles.datePickerColumn}>
               <Text>Data de Ida</Text>
               <PaperButton
@@ -145,8 +159,11 @@ export default function OrcamentoScreen({ navigation }) {
                   display="default"
                   onChange={handleDataIdaChange}
                 />
-                )}
+              )}
             </View>
+          </View>
+
+          <View style={styles.dateContainer}>
             <View style={styles.datePickerColumn}>
               <Text>Data de Volta</Text>
               <PaperButton
@@ -177,7 +194,7 @@ export default function OrcamentoScreen({ navigation }) {
           />
           <Button
             mode="contained"
-            onPress={onSavePressed}
+            onPress={handlePlanejamento}
             style={{ marginTop: 24 }}
           >
             Salvar Orçamento
@@ -198,12 +215,24 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginVertical: 8,
   },
+  datePickerButton: {
+    marginTop: 8,
+  },
+  dateContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 10,
+    paddingHorizontal: 16,
+    borderColor: '#000',
+    borderWidth: 1,
+    borderRadius: 5,
+  },
+
   datePickerColumn: {
     flex: 1,
     marginRight: 8,
-  },
-  datePickerButton: {
-    marginTop: 8,
+    alignItems: 'center',  // Adicione esta linha para centralizar o conteúdo verticalmente
   },
   // Estilos da tela, se necessário
 });

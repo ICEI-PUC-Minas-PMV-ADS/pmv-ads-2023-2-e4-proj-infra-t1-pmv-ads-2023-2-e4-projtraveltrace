@@ -17,18 +17,18 @@ import { Alert } from 'react-native';
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState({ value: null, error: '' });
-  const [senha, setSenha] = useState({ value: null, error: '' });
+  const [password, setPassword] = useState({ value: null, error: '' });
   const [nomeUsuario, setNomeUsuario] = useState(null);
 
   const entrar = async () => {
-    if (!email || !senha) {
+    if (!email.value || !password.value) {
       Alert.alert('Erro', 'Por favor, preencha todos os campos.');
       return;
     }
-
+  
     try {
-      const usuario = await UsuarioDB.buscarUsuario(email, senha);
-
+      const usuario = await UsuarioDB.buscarUsuario(email.value, password.value);
+  
       if (usuario) {
         setNomeUsuario(usuario.nome);
         navigation.navigate('HomeScreen');
@@ -62,9 +62,9 @@ export default function Login({ navigation }) {
       <TextInput
         label="Senha"
         returnKeyType="done"
-        onChangeText={(value) => setSenha({ value, error: '' })}
-        error={!!senha.error}
-        errorText={senha.error}
+        onChangeText={(value) => setPassword({ value, error: '' })}
+        error={!!password.error}
+        errorText={password.error}
         secureTextEntry
       />
       <Button mode="contained" onPress={() => entrar()}>

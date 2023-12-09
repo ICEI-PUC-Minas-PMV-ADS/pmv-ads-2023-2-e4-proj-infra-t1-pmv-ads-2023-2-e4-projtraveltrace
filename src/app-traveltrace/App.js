@@ -6,7 +6,7 @@ import { theme } from './src/theme/'
 import { LoginScreen, CadastroScreen } from './src/screens'
 import OrcamentoScreen from './src/screens/OrcamentoScreen'
 import HomeScreen from './src/screens/HomeScreen'
-import PlanejamentosScreen from './src/screens/PlanejamentosScreen'
+import PlanejamentosScreen from './src/screens/ListaPlanejamentos'
 
 const Stack = createStackNavigator()
 
@@ -19,7 +19,7 @@ export default function App() {
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="CadastroScreen" component={CadastroScreen} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
-          <Stack.Screen name="PlanejamentosScreen" component={PlanejamentosScreen} />
+          <Stack.Screen name="ListaPlanejamentos" component={PlanejamentosScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

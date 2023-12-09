@@ -31,7 +31,7 @@ function HomeScreen({ navigation }) {
   };
 
   const navigateToPlanejamentos = () => {
-    navigation.navigate('PlanejamentosScreen');
+    navigation.navigate('ListaPlanejamentos');
   }
 
   return (
