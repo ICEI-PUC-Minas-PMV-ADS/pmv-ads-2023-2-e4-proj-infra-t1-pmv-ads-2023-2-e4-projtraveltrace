@@ -7,6 +7,7 @@ import { LoginScreen, CadastroScreen } from './src/screens'
 import OrcamentoScreen from './src/screens/OrcamentoScreen'
 import HomeScreen from './src/screens/HomeScreen'
 import PlanejamentosScreen from './src/screens/ListaPlanejamentos'
+import PlanejamentoCriado from './src/screens/PlanejamentoCriado'
 
 const Stack = createStackNavigator()
 
@@ -20,6 +21,7 @@ export default function App() {
           <Stack.Screen name="CadastroScreen" component={CadastroScreen} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <Stack.Screen name="ListaPlanejamentos" component={PlanejamentosScreen} />
+          <Stack.Screen name="Planejamento criado" component={PlanejamentoCriado} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

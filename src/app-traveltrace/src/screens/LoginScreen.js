@@ -47,7 +47,6 @@ export default function Login({ navigation }) {
 
   return (
     <Background>
-      <BackButton goBack={navigation.goBack} />
       <Logo />
       <Header>Login</Header>
       <TextInput

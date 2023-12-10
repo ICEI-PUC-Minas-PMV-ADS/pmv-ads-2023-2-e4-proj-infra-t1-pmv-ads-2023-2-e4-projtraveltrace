@@ -1,4 +1,5 @@
 import * as SQLite from 'expo-sqlite';
+import { format } from 'date-fns';
 
 const db = SQLite.openDatabase('mydatabase.db');
 
@@ -21,16 +22,35 @@ export const criarTabelaPlanejamentos = () => {
   });
 };
 
+const formatDate = (date) => {
+  try {
+    if (!(date instanceof Date) || isNaN(date.getTime())) {
+      throw new Error('Invalid date');
+    }
+    return format(date, 'dd/MM/yyyy'); // Ajuste o formato conforme necessário
+  } catch (error) {
+    console.error('Error formatting date:', error);
+    return null;
+  }
+};
+
 export const salvarPlanejamento = (planejamentoCriado, setPlanejamentosAtualizados) => {
   return new Promise((resolve, reject) => {
     db.transaction(tx => {
       tx.executeSql(
         'INSERT INTO planejamentos (pais, cidade, valor, data_ida, data_volta, descricao) VALUES (?, ?, ?, ?, ?, ?)',
-        [planejamentoCriado.pais, planejamentoCriado.cidade, planejamentoCriado.valor, planejamentoCriado.data_ida, planejamentoCriado.data_volta, planejamentoCriado.descricao],
+        [
+          planejamentoCriado.pais.value,
+          planejamentoCriado.cidade.value,
+          planejamentoCriado.valor.value,
+          formatDate(planejamentoCriado.data_ida), // Remova o .value para passar diretamente o objeto Date
+          formatDate(planejamentoCriado.data_volta), // Remova o .value para passar diretamente o objeto Date
+          planejamentoCriado.descricao.value
+        ],
         (_, { rowsAffected, insertId }) => {
           if (rowsAffected > 0) {
             console.log('Planejamento cadastrado com sucesso. ID: ', insertId);
-            resolve(); // Resolva a promessa quando o planejamento for salvo com sucesso
+            resolve();
           } else {
             reject('Falha ao cadastrar o planejamento');
           }
@@ -39,10 +59,9 @@ export const salvarPlanejamento = (planejamentoCriado, setPlanejamentosAtualizad
           reject('Erro ao inserir o planejamento no banco de dados: ' + error.message);
         }
       );
-    }, reject, setPlanejamentosAtualizados); // Passa setPlanejamnetosAtualizados para o escopo da transação
+    }, reject, setPlanejamentosAtualizados);
   });
 };
-
 
 
 
@@ -50,7 +69,7 @@ export const atualizarPlanejamento = (planejamentoAtualizado) => {
   return new Promise((resolve, reject) => {
     db.transaction(tx => {
       tx.executeSql(
-        'UPDATE planejamentos SET pais=?, cidade=?, valor=?, data_ida=?, data_volta=?, descricao=?, WHERE id=?',
+        'UPDATE planejamentos SET pais=?, cidade=?, valor=?, data_ida=?, data_volta=?, descricao=? WHERE id=?',
         [planejamentoAtualizado.pais, planejamentoAtualizado.cidade, planejamentoAtualizado.valor, planejamentoAtualizado.data_ida, planejamentoAtualizado.data_volta, planejamentoAtualizado.descricao, planejamentoAtualizado.id],
         (_, { rowsAffected }) => {
           if (rowsAffected > 0) {
@@ -80,13 +99,16 @@ export const getCadastroPlanejamento = (searchQuery) => {
         params.push(`%${searchQuery}%`);
       }
 
+      console.log('Executing SELECT query...');
       tx.executeSql(
         query,
         params,
         (_, { rows }) => {
+          console.log('Consulta SELECT bem-sucedida:', rows);
           resolve(rows._array);
         },
         (_, error) => {
+          console.error('Erro na consulta SELECT:', error);
           reject(error);
         }
       );
@@ -108,6 +130,6 @@ export const deleteCadastroPlanejamento = (id) => {
           reject(error);
         }
       );
-    });
-  });
+    });
+  });
 };

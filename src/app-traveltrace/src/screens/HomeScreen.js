@@ -5,6 +5,7 @@ import Background from '../components/Background';
 import Logo from '../components/Logo';
 import Header from '../components/Header';
 import Button from '../components/Button';
+import LogoutIcon from '../components/LogoutIcon';
 
 // Componente WebLink separado
 const WebLink = ({ navigation }) => {
@@ -16,7 +17,7 @@ const WebLink = ({ navigation }) => {
 
   return (
     <TouchableOpacity onPress={handlePress}>
-      <Text style={{ color: 'blue', fontSize: 20 }}>Visite o site</Text>
+      <Text style={{ color: '#3894FC', fontSize: 18 }}>Visite o site</Text>
     </TouchableOpacity>
   );
 };
@@ -39,22 +40,20 @@ function HomeScreen({ navigation }) {
       <Logo />
       <Header>Planeje aqui a sua viagem!</Header>
       <Button mode="contained" onPress={navigateToOrcamento}>
-        Orçamento
-      </Button>
-      <Button mode="contained" onPress={navigateToRotas}>
-        Rotas
+        Criar Planejamento
       </Button>
       <Button mode="contained" onPress={navigateToPlanejamentos}>
         Meus Planejamentos
       </Button>
       <Header>Indeciso quanto ao destino?</Header>
       <WebLink navigation={navigation} />
+      <LogoutIcon navigation={navigation}></LogoutIcon>
     </Background>
   );
 }
 
 const styles = StyleSheet.create({
-  // Adicione estilos adicionais conforme necessário
+
 });
 
 export default HomeScreen;
