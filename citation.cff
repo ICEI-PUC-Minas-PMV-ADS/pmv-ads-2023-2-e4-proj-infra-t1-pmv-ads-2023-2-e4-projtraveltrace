@@ -1,0 +1,31 @@
+message: Please cite this software using these metadata.
+title:Travel Trace
+authors:
+  - family-names: Andrade
+    given-names: Laura
+  - family-names: Gabriel
+    given-names: Idelfonso
+  - family-names: Julia Estevam Correa
+    given-names: Mariana
+  - family-names: Costa
+    given-names: Francisco
+  - family-names: Aston
+    given-names: Gabriel
+  - family-names: Peixoto
+    given-names: Ricardo
+  - family-names: Luiz
+    given-names: Vinicius
+  - family-names: Xavier
+    given-names: Armando
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Augusto Lara Soares
+    given-names: Felipe
+ 
+keywords:
+  - organizar
+  - roteiro
+  - viagem
+repository-code: 
+version: 1.0.0
+date-released: 2023-12-10
